@@ -10,7 +10,7 @@ function createLunrIndex(indexingRequest) {
   }
   var workerUrl = indexingRequest.gwtModuleUrl + "lunr_worker.js";
   if (typeof (lunrWorker) == "undefined") {
-    console.log("Creating lunr index: workerUrl=" + workerUrl);
+    console.log("Creating index: workerUrl=" + workerUrl);
     lunrWorker = new Worker(workerUrl);
   }
   lunrWorker.onmessage = function (event) {
@@ -18,7 +18,7 @@ function createLunrIndex(indexingRequest) {
     addIndexJsonToCache(indexJson);
 
     lunrIndex = lunr.Index.load(JSON.parse(indexJson));
-    console.log("Created lunr index: " + lunrIndex);
+    console.log("Created index.");
 
     lunrWorker.terminate();
     lunrWorker = undefined;
@@ -29,7 +29,7 @@ function createLunrIndex(indexingRequest) {
   var fieldsJson = JSON.stringify(indexingRequest.fields);
   var fields = JSON.parse(fieldsJson);
 
-  console.log("Creating workerArgs - fields: " + fieldsJson);
+  //console.log("Creating workerArgs - fields: " + fieldsJson);
   // Start the worker by giving it the documents to index
   var workerArgs = {
     "gwtModuleUrl": indexingRequest.gwtModuleUrl,
@@ -37,18 +37,18 @@ function createLunrIndex(indexingRequest) {
     "fields": fields,
     "documents": documents
   };
-  console.log("Created workerArgs: " + JSON.stringify(workerArgs));
+  //console.log("Created workerArgs: " + JSON.stringify(workerArgs));
   lunrWorker.postMessage(workerArgs);
 }
 
 function loadLunrIndex(serializedIndex) {
   lunrIndex = lunr.Index.load(JSON.parse(serializedIndex));
-  console.log("Loaded lunr index: " + lunrIndex);
+  console.log("Loaded index.");
 }
 
 function isLunrIndexReady() {
   if (typeof (lunrIndex) == "undefined") {
-    console.log("No lunr index created");
+    console.log("No index created");
     return false;
   }
   return true;

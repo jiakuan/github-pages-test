@@ -1,7 +1,7 @@
 (function () {
   self.addEventListener('message', function (e) {
         var workerArgs = e.data;
-        console.log("Received message: " + JSON.stringify(workerArgs))
+        //console.log("Received message: " + JSON.stringify(workerArgs))
         self.importScripts(workerArgs.gwtModuleUrl + "lunr.min.js");
 
         var index = lunr(function () {

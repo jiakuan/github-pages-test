@@ -36,7 +36,7 @@
   <link href='../styles/main.min.css' rel='stylesheet' type='text/css'>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.5/platform.min.js"></script>
-  <style></style>
+  <style>.b11.nav > .nav__content {max-width:1100px;} .b12.cbb > .cbb__content {max-width:1100px;} </style>
 
 
   
@@ -56,16 +56,16 @@
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div class="nav b5">
+<div class="nav b11">
   <div class="nav__content max-width-md">
     <div class="nav__content__left">
       <div class="nav__header">
-        <a class="logo" href="/">
+        <a class="logo" href="../index.html" title="Home">
           <img class="logo__img" src="../images/documentnode_simple.svg" alt="Document Node">
           <span class="logo__name">Sample&nbsp;Site</span><span class="superscript">alpha</span>
         </a>
         <label id="menu-icon" class="nav__menu-toggle" for="menu-toggle-1">
-          <img class="nav__menu-icon" src="../images/icon-menu-white.svg">
+          <svg class="nav__menu-icon" viewBox="0 0 448 512"><rect y="398" width="448" height="36"/><rect y="78" width="448" height="36"/><polygon points="6 238 0 238 0 244 0 256 0 274 448 274 448 256 448 244 448 238 442 238 6 238"/></svg>
         </label>
       </div>
       <input id="menu-toggle-1" class="hide" type="checkbox">
@@ -82,7 +82,7 @@
       <a class="nav__btn" href="../login.html">Log In</a>
     </div>
   </div>
-</div><div id="crumb-bar" class="cbb b6">
+</div><div id="crumb-bar" class="cbb b12">
   <div class="cbb__content max-width-md">
     <div class="left-part">
       <div class="breadcrumb-item">
@@ -100,29 +100,59 @@
 
     </div>
     <div class="right-part">
-      <img class="icon-search" src="../images/icon-search-gray.svg">
-      <input id="breadcrumb-search-box" class="search-box" type="search" placeholder="Double ⇧ to search">
+      <div class="search-field">
+        <img class="icon-search" src="../images/icon-search-gray.svg">
+        <input id="breadcrumb-search-box" class="search-box" type="search" placeholder="Double ⇧ to search">
+      </div>
       <img id="back-to-top" src="../images/icon-top-darkgray.svg" title="Back to Top">
     </div>
   </div>
-</div><div class="c-title b7">
-  <div class="c-title__content max-width-md">
-    <h1>-this is a test+doc-</h1>
-    <div class="meta">
-      <img class="avatar" src="../images/default-avatar.svg" alt="Jake" title="Jake">
-      <a class="author">Jake</a>
-      <span class="meta-divider">/</span>
-      <span class="updated">9/12/19</span>
+</div><div class="c-nav-article-toc b13">
+  <div class="c-nav-article-toc__content max-width-lg grid-top">
+    <div id="side-bar" class="col-2_md-3_xs-12">
+      <ul>
+          <li><a href="../empty-folder.html"><h3>Empty folder</h3></a>
+          </li>
+          <li><a href="../folder-1.html"><h3>Folder 1</h3></a>
+            <ul>
+                                <li><a  class="active" href="-this-is-a-test-doc.html">-this is a test+doc-</a></li>
+                  <li><a  href="试试中文看看.html">试试中文看看</a></li>
+                  <li><a  href="a-journey-of-fixing-100-cpu-load-on-aws-mysql-rds.html">A journey of fixing 100% CPU load on AWS MySQL RDS</a></li>
+                  <li><a  href="document-1.html">Document 1</a></li>
+            </ul>
+          </li>
+          <li><a href="../folder-2.html"><h3>Folder 2</h3></a>
+            <ul>
+                                <li><a  href="../folder-2/meet-document-node.html">Meet Document Node</a></li>
+            </ul>
+          </li>
+          <li><a  href="../meet-document-node.html">Meet Document Node</a></li>
+          <li><a  href="../rich-text.html">Rich Text</a></li>
+          <li><a  href="../two-columns.html">Test Columns</a></li>
+          <li><a  href="../test-image.html">Test Image</a></li>
+          <li><a  href="../test-1.html">test-1</a></li>
+          <li><a  href="../test-3.html">Test CPP23</a></li>
+          <li><a  href="../test-5.html">New document3</a></li>
+          <li><a  href="../test-6.html">test-6</a></li>
+          <li><a  href="../test-4.html">test-4</a></li>
+          <li><a  href="../why-document-node.html">Why Document Node?</a></li>
+      </ul>
     </div>
-    <div class="cover" style="--aspect-ratio:16/9; background-image: url('../images/image-placeholder-16x9.svg');"></div>
-  </div>
-</div><div class="c-article b8">
-  <div class="c-article__content max-width-sm">
-    <div class="c-article-body">
-      <p>fdsafdafsafdsa</p>
+    <div id="doc-content" class="col-8_md-9_xs-12">
+      <div class="doc-title">
+        <h1>-this is a test+doc-</h1>
+      </div>
+      <div id="doc-body" class="doc-body">
+        <p>fdsafdafsafdsa</p>
+      </div>
+    </div>
+    <div id="toc" class="col-2_md-0_xs-12">
+      <h3>On this page</h3>
+      <ul>
+      </ul>
     </div>
   </div>
-</div><footer class="footer-info-cols b9">
+</div><footer class="footer-info-cols b14">
   <div class="footer-info-cols__content max-width-md grid-top">
     <div class="col-4_sm-6_xs-12 info-section">
       <div class="logo">
@@ -165,9 +195,9 @@
       <ul class="col-3_sm-6_xs-12">
         <li><a class="title">Download</a></li>
         <li><a href="https://documentnode.io/download">Mac</a></li>
-        <li><a href="https://documentnode.io/download">Windows</a></li>
         <li><a href="https://documentnode.io/download">Linux</a></li>
         <li><a href="https://documentnode.io/download">All devices</a></li>
+        <li><a href="https://documentnode.io/download">Windows</a></li>
       </ul>
       <ul class="col-3_sm-6_xs-12">
         <li><a class="title">Docs</a></li>
@@ -191,7 +221,7 @@
       </ul>
     </div>
   </div>
-</footer><footer class="footer-powered-by b10">
+</footer><footer class="footer-powered-by b15">
   <div class="footer-powered-by__content max-width-md">
     <div class="poweredby">
       <span>Powered by </span>

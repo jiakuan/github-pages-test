@@ -56,16 +56,16 @@
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div class="nav b16">
+<div class="nav b55">
   <div class="nav__content max-width-md">
     <div class="nav__content__left">
       <div class="nav__header">
-        <a class="logo" href="/">
+        <a class="logo" href="./index.html" title="Home">
           <img class="logo__img" src="./images/documentnode_simple.svg" alt="Document Node">
           <span class="logo__name">Sample&nbsp;Site</span><span class="superscript">alpha</span>
         </a>
         <label id="menu-icon" class="nav__menu-toggle" for="menu-toggle-1">
-          <img class="nav__menu-icon" src="./images/icon-menu-white.svg">
+          <svg class="nav__menu-icon" viewBox="0 0 448 512"><rect y="398" width="448" height="36"/><rect y="78" width="448" height="36"/><polygon points="6 238 0 238 0 244 0 256 0 274 448 274 448 256 448 244 448 238 442 238 6 238"/></svg>
         </label>
       </div>
       <input id="menu-toggle-1" class="hide" type="checkbox">
@@ -86,7 +86,7 @@
   <div class="cbb__content max-width-md">
     <div class="left-part">
       <div class="breadcrumb-item">
-        <a href="index.html">Home</a>
+        <a href="./index.html">Home</a>
         <img class="icon-arrow" src="./images/icon-arrow-right-gray.svg">
       </div>
 
@@ -97,8 +97,10 @@
 
     </div>
     <div class="right-part">
-      <img class="icon-search" src="./images/icon-search-gray.svg">
-      <input id="breadcrumb-search-box" class="search-box" type="search" placeholder="Double ⇧ to search">
+      <div class="search-field">
+        <img class="icon-search" src="./images/icon-search-gray.svg">
+        <input id="breadcrumb-search-box" class="search-box" type="search" placeholder="Double ⇧ to search">
+      </div>
       <img id="back-to-top" src="./images/icon-top-darkgray.svg" title="Back to Top">
     </div>
   </div>
@@ -108,13 +110,16 @@
       <div class="col" data-l-en="irt">
         <article class="post-card">
           <div class="post-body">
-            <a href="./folder-1/-this-is-a-test-doc-.html" data-l-en="bda">
+            <a href="./folder-1/-this-is-a-test-doc.html" data-l-en="bda">
               <h3 class="title" data-l-en="ttl">-this is a test+doc-</h3>
               <p class="brief" data-l-en="csm">fdsafdafsafdsa</p>
             </a>
           </div>
           <div class="post-footer">
-            <img src="./images/default-avatar.svg" data-l-en="avt" title="Jake">
+            <div class="meta">
+              <img src="./images/default-avatar.jpg" data-l-en="avt" title="Jake">
+              <span class="created" data-l-en="cdt">9/12/19</span>
+            </div>
             <span class="reading-time" data-l-en="rdt">0 SEC READ</span>
           </div>
         </article>
@@ -128,7 +133,10 @@
             </a>
           </div>
           <div class="post-footer">
-            <img src="./images/default-avatar.svg" data-l-en="avt" title="Jake">
+            <div class="meta">
+              <img src="./images/default-avatar.jpg" data-l-en="avt" title="Jake">
+              <span class="created" data-l-en="cdt">9/11/19</span>
+            </div>
             <span class="reading-time" data-l-en="rdt">0 SEC READ</span>
           </div>
         </article>
@@ -142,7 +150,10 @@
             </a>
           </div>
           <div class="post-footer">
-            <img src="./images/default-avatar.svg" data-l-en="avt" title="Jake">
+            <div class="meta">
+              <img src="./images/default-avatar.jpg" data-l-en="avt" title="Jake">
+              <span class="created" data-l-en="cdt">9/11/19</span>
+            </div>
             <span class="reading-time" data-l-en="rdt">0 SEC READ</span>
           </div>
         </article>
@@ -152,12 +163,25 @@
           <div class="post-body">
             <a href="./folder-1/document-1.html" data-l-en="bda">
               <h3 class="title" data-l-en="ttl">Document 1</h3>
-              <p class="brief" data-l-en="csm">fdafdsafsdafsa</p>
+              <p class="brief" data-l-en="csm">fdafdsafsdafsa
+dfafad
+fdafdsa
+fdasfdadafdsafdsafdafa
+fafdsa
+fdafda
+fdafda
+fdafd
+fdaf
+fdsadas
+fdafsdafdafadsdfsfds</p>
             </a>
           </div>
           <div class="post-footer">
-            <img src="./images/default-avatar.svg" data-l-en="avt" title="Jake">
-            <span class="reading-time" data-l-en="rdt">0 SEC READ</span>
+            <div class="meta">
+              <img src="./images/default-avatar.jpg" data-l-en="avt" title="Jake">
+              <span class="created" data-l-en="cdt">9/11/19</span>
+            </div>
+            <span class="reading-time" data-l-en="rdt">2 SEC READ</span>
           </div>
         </article>
       </div>
@@ -225,9 +249,9 @@
       <ul class="col-3_sm-6_xs-12">
         <li><a class="title">Download</a></li>
         <li><a href="https://documentnode.io/download">Mac</a></li>
-        <li><a href="https://documentnode.io/download">Windows</a></li>
         <li><a href="https://documentnode.io/download">Linux</a></li>
         <li><a href="https://documentnode.io/download">All devices</a></li>
+        <li><a href="https://documentnode.io/download">Windows</a></li>
       </ul>
       <ul class="col-3_sm-6_xs-12">
         <li><a class="title">Docs</a></li>
